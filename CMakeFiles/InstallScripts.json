@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/rosiechen/AgarLE/cmake_install.cmake",
+		"/Users/rosiechen/AgarLE/agario/cmake_install.cmake",
+		"/Users/rosiechen/AgarLE/environment/cmake_install.cmake",
+		"/Users/rosiechen/AgarLE/environment/pybind11/cmake_install.cmake",
+		"/Users/rosiechen/AgarLE/utils/cmake_install.cmake",
+		"/Users/rosiechen/AgarLE/bench/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

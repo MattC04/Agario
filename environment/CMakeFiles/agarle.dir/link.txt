@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -arch arm64 -bundle -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/openssl@3/lib -o agarleNone CMakeFiles/agarle.dir/bindings.cpp.o  -undefined dynamic_lookup -flto

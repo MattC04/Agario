@@ -49,12 +49,23 @@ class GridGymTest(unittest.TestCase):
         space and invalid actions are not within the action space
         """
         env = gym.make(env_name, **default_config)
+        print('env action space', env.action_space)
 
+        # for x in range(-10, 10):
+        #     for y in range(-10, 10):
+        #         for a in (0, 1, 2):
+        #             action = (np.array([float(x), float(y)]), a)
+        #             self.assertTrue(action in env.action_space, "valid action is not within action space")
+        #             # self.assertTrue(env.action_space.contains(action), "valid action is not within action space")
         for x in range(-10, 10):
             for y in range(-10, 10):
                 for a in (0, 1, 2):
-                    action = (np.array([float(x), float(y)]), a)
-                    self.assertTrue(action in env.action_space, "valid action is not within action space")
+                    action = (np.array([x, y], dtype=np.float32), a)
+                    self.assertTrue(
+                        env.action_space.contains(action),
+                        f"valid action {action} is not within action space"
+                    )
+
 
                 for a in (-1, -2, 3, 4, 5):
                     action = (np.array([float(x), float(y)]), a)
