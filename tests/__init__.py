@@ -6,7 +6,8 @@ Author: Jon Deaton (jonpauldeaton@gmail.com)
 
 import numpy as np
 
-null_action = (np.zeros(2), 0)
+# null_action = (np.zeros(2), 0)
+null_action = (np.zeros(2).astype(np.float32), 0)
 
 # Default environment configuration for tests.
 default_config = {

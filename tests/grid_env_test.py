@@ -11,26 +11,7 @@ import numpy as np
 
 import unittest
 
-#from tests import default_config, null_action
-
-null_action = (np.zeros(2).astype(np.float32), 0)
-
-# Default environment configuration for tests.
-default_config = {
-            'ticks_per_step':  4,
-            'num_frames':      1,
-            'arena_size':      1000,
-            'num_pellets':     1000,
-            'num_viruses':     25,
-            'num_bots':        25,
-            'pellet_regen':    True,
-            'grid_size':       128,
-            'observe_cells':   True,
-            'observe_others':  True,
-            'observe_viruses': True,
-            'observe_pellets': True
-        }
-
+from tests import default_config, null_action
 
 env_name = "agario-grid-v0"
 
@@ -68,15 +49,26 @@ class GridGymTest(unittest.TestCase):
         space and invalid actions are not within the action space
         """
         env = gym.make(env_name, **default_config)
+        print('env action space', env.action_space)
 
+        # for x in range(-10, 10):
+        #     for y in range(-10, 10):
+        #         for a in (0, 1, 2):
+        #             action = (np.array([float(x), float(y)]), a)
+        #             self.assertTrue(action in env.action_space, "valid action is not within action space")
+        #             # self.assertTrue(env.action_space.contains(action), "valid action is not within action space")
         for x in range(-10, 10):
             for y in range(-10, 10):
                 for a in (0, 1, 2):
-                    action = (np.array([float(x), float(y)]).astype(np.float32), a)
-                    self.assertTrue(action in env.action_space, "valid action is not within action space")
+                    action = (np.array([x, y], dtype=np.float32), a)
+                    self.assertTrue(
+                        env.action_space.contains(action),
+                        f"valid action {action} is not within action space"
+                    )
+
 
                 for a in (-1, -2, 3, 4, 5):
-                    action = (np.array([float(x), float(y)]).astype(np.float32), a)
+                    action = (np.array([float(x), float(y)]), a)
                     self.assertFalse(action in env.action_space, "invalid action is within action space")
 
     def test_steps(self):

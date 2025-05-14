@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/miniconda3/lib/python3.12/site-packages/cmake/data/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/bin/cmake
 
 # The command to remove a file.
-RM = /opt/miniconda3/lib/python3.12/site-packages/cmake/data/bin/cmake -E rm -f
+RM = /opt/homebrew/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/heleny/Documents/GitHub/AgarLE
+CMAKE_SOURCE_DIR = /Users/rosiechen/AgarLE
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/heleny/Documents/GitHub/AgarLE/agario
+CMAKE_BINARY_DIR = /Users/rosiechen/AgarLE
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/heleny/Documents/GitHub/AgarLE/agario
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
-	/opt/miniconda3/lib/python3.12/site-packages/cmake/data/bin/ctest $(ARGS)
+	/opt/homebrew/bin/ctest $(ARGS)
 .PHONY : test
 
 # Special rule for the target test
@@ -78,7 +78,7 @@ test/fast: test
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/opt/miniconda3/lib/python3.12/site-packages/cmake/data/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -88,7 +88,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/opt/miniconda3/lib/python3.12/site-packages/cmake/data/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heleny/Documents/GitHub/AgarLE/agario/CMakeFiles /Users/heleny/Documents/GitHub/AgarLE/agario//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/heleny/Documents/GitHub/AgarLE/agario/CMakeFiles 0
+	cd /Users/rosiechen/AgarLE && $(CMAKE_COMMAND) -E cmake_progress_start /Users/rosiechen/AgarLE/CMakeFiles /Users/rosiechen/AgarLE/agario//CMakeFiles/progress.marks
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agario/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rosiechen/AgarLE/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agario/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,135 +113,132 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agario/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agario/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/rosiechen/AgarLE && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named client
+# Convenience name for target.
+agario/CMakeFiles/client.dir/rule:
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agario/CMakeFiles/client.dir/rule
+.PHONY : agario/CMakeFiles/client.dir/rule
 
-# Build rule for target.
-client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client
+# Convenience name for target.
+client: agario/CMakeFiles/client.dir/rule
 .PHONY : client
 
 # fast build rule for target.
 client/fast:
-	$(MAKE) $(MAKESILENT) -f agario/CMakeFiles/client.dir/build.make agario/CMakeFiles/client.dir/build
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f agario/CMakeFiles/client.dir/build.make agario/CMakeFiles/client.dir/build
 .PHONY : client/fast
 
-#=============================================================================
-# Target rules for targets named server
+# Convenience name for target.
+agario/CMakeFiles/server.dir/rule:
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agario/CMakeFiles/server.dir/rule
+.PHONY : agario/CMakeFiles/server.dir/rule
 
-# Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
+# Convenience name for target.
+server: agario/CMakeFiles/server.dir/rule
 .PHONY : server
 
 # fast build rule for target.
 server/fast:
-	$(MAKE) $(MAKESILENT) -f agario/CMakeFiles/server.dir/build.make agario/CMakeFiles/server.dir/build
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f agario/CMakeFiles/server.dir/build.make agario/CMakeFiles/server.dir/build
 .PHONY : server/fast
 
-#=============================================================================
-# Target rules for targets named bot-compare
+# Convenience name for target.
+agario/CMakeFiles/bot-compare.dir/rule:
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agario/CMakeFiles/bot-compare.dir/rule
+.PHONY : agario/CMakeFiles/bot-compare.dir/rule
 
-# Build rule for target.
-bot-compare: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bot-compare
+# Convenience name for target.
+bot-compare: agario/CMakeFiles/bot-compare.dir/rule
 .PHONY : bot-compare
 
 # fast build rule for target.
 bot-compare/fast:
-	$(MAKE) $(MAKESILENT) -f agario/CMakeFiles/bot-compare.dir/build.make agario/CMakeFiles/bot-compare.dir/build
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f agario/CMakeFiles/bot-compare.dir/build.make agario/CMakeFiles/bot-compare.dir/build
 .PHONY : bot-compare/fast
 
-#=============================================================================
-# Target rules for targets named test-engine
+bots/benchmark.o: bots/benchmark.cpp.o
+.PHONY : bots/benchmark.o
 
-# Build rule for target.
-test-engine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-engine
-.PHONY : test-engine
+# target to build an object file
+bots/benchmark.cpp.o:
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f agario/CMakeFiles/bot-compare.dir/build.make agario/CMakeFiles/bot-compare.dir/bots/benchmark.cpp.o
+.PHONY : bots/benchmark.cpp.o
 
-# fast build rule for target.
-test-engine/fast:
-	$(MAKE) $(MAKESILENT) -f agario/CMakeFiles/test-engine.dir/build.make agario/CMakeFiles/test-engine.dir/build
-.PHONY : test-engine/fast
+bots/benchmark.i: bots/benchmark.cpp.i
+.PHONY : bots/benchmark.i
 
-#=============================================================================
-# Target rules for targets named test-engine-renderable
+# target to preprocess a source file
+bots/benchmark.cpp.i:
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f agario/CMakeFiles/bot-compare.dir/build.make agario/CMakeFiles/bot-compare.dir/bots/benchmark.cpp.i
+.PHONY : bots/benchmark.cpp.i
 
-# Build rule for target.
-test-engine-renderable: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-engine-renderable
-.PHONY : test-engine-renderable
+bots/benchmark.s: bots/benchmark.cpp.s
+.PHONY : bots/benchmark.s
 
-# fast build rule for target.
-test-engine-renderable/fast:
-	$(MAKE) $(MAKESILENT) -f agario/CMakeFiles/test-engine-renderable.dir/build.make agario/CMakeFiles/test-engine-renderable.dir/build
-.PHONY : test-engine-renderable/fast
+# target to generate assembly for a file
+bots/benchmark.cpp.s:
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f agario/CMakeFiles/bot-compare.dir/build.make agario/CMakeFiles/bot-compare.dir/bots/benchmark.cpp.s
+.PHONY : bots/benchmark.cpp.s
 
-#=============================================================================
-# Target rules for targets named agarle
+client/main.o: client/main.cpp.o
+.PHONY : client/main.o
 
-# Build rule for target.
-agarle: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agarle
-.PHONY : agarle
+# target to build an object file
+client/main.cpp.o:
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f agario/CMakeFiles/client.dir/build.make agario/CMakeFiles/client.dir/client/main.cpp.o
+.PHONY : client/main.cpp.o
 
-# fast build rule for target.
-agarle/fast:
-	$(MAKE) $(MAKESILENT) -f environment/CMakeFiles/agarle.dir/build.make environment/CMakeFiles/agarle.dir/build
-.PHONY : agarle/fast
+client/main.i: client/main.cpp.i
+.PHONY : client/main.i
 
-#=============================================================================
-# Target rules for targets named test-envs
+# target to preprocess a source file
+client/main.cpp.i:
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f agario/CMakeFiles/client.dir/build.make agario/CMakeFiles/client.dir/client/main.cpp.i
+.PHONY : client/main.cpp.i
 
-# Build rule for target.
-test-envs: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-envs
-.PHONY : test-envs
+client/main.s: client/main.cpp.s
+.PHONY : client/main.s
 
-# fast build rule for target.
-test-envs/fast:
-	$(MAKE) $(MAKESILENT) -f environment/CMakeFiles/test-envs.dir/build.make environment/CMakeFiles/test-envs.dir/build
-.PHONY : test-envs/fast
+# target to generate assembly for a file
+client/main.cpp.s:
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f agario/CMakeFiles/client.dir/build.make agario/CMakeFiles/client.dir/client/main.cpp.s
+.PHONY : client/main.cpp.s
 
-#=============================================================================
-# Target rules for targets named util
+server/main.o: server/main.cpp.o
+.PHONY : server/main.o
 
-# Build rule for target.
-util: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 util
-.PHONY : util
+# target to build an object file
+server/main.cpp.o:
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f agario/CMakeFiles/server.dir/build.make agario/CMakeFiles/server.dir/server/main.cpp.o
+.PHONY : server/main.cpp.o
 
-# fast build rule for target.
-util/fast:
-	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/util.dir/build.make utils/CMakeFiles/util.dir/build
-.PHONY : util/fast
+server/main.i: server/main.cpp.i
+.PHONY : server/main.i
 
-#=============================================================================
-# Target rules for targets named agario-bench
+# target to preprocess a source file
+server/main.cpp.i:
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f agario/CMakeFiles/server.dir/build.make agario/CMakeFiles/server.dir/server/main.cpp.i
+.PHONY : server/main.cpp.i
 
-# Build rule for target.
-agario-bench: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agario-bench
-.PHONY : agario-bench
+server/main.s: server/main.cpp.s
+.PHONY : server/main.s
 
-# fast build rule for target.
-agario-bench/fast:
-	$(MAKE) $(MAKESILENT) -f bench/CMakeFiles/agario-bench.dir/build.make bench/CMakeFiles/agario-bench.dir/build
-.PHONY : agario-bench/fast
+# target to generate assembly for a file
+server/main.cpp.s:
+	cd /Users/rosiechen/AgarLE && $(MAKE) $(MAKESILENT) -f agario/CMakeFiles/server.dir/build.make agario/CMakeFiles/server.dir/server/main.cpp.s
+.PHONY : server/main.cpp.s
 
 # Help Target
 help:
@@ -252,15 +249,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... agario-bench"
-	@echo "... agarle"
 	@echo "... bot-compare"
 	@echo "... client"
 	@echo "... server"
-	@echo "... test-engine"
-	@echo "... test-engine-renderable"
-	@echo "... test-envs"
-	@echo "... util"
+	@echo "... bots/benchmark.o"
+	@echo "... bots/benchmark.i"
+	@echo "... bots/benchmark.s"
+	@echo "... client/main.o"
+	@echo "... client/main.i"
+	@echo "... client/main.s"
+	@echo "... server/main.o"
+	@echo "... server/main.i"
+	@echo "... server/main.s"
 .PHONY : help
 
 
@@ -272,6 +272,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/rosiechen/AgarLE && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

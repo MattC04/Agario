@@ -22,7 +22,7 @@ cxxopts::Options options() {
     options.parse_positional({"server"});
     return options;
 
-  } catch (const cxxopts::exceptions::exception &e) {
+  } catch (const cxxopts::OptionException &e) {
     std::cout << "error parsing options: " << e.what() << std::endl;
     exit(1);
   }
