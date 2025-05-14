@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/heleny/Documents/GitHub/AgarLE/agario/cmake_install.cmake",
+		"/Users/heleny/Documents/GitHub/AgarLE/agario/agario/cmake_install.cmake",
+		"/Users/heleny/Documents/GitHub/AgarLE/agario/environment/cmake_install.cmake",
+		"/Users/heleny/Documents/GitHub/AgarLE/agario/environment/pybind11/cmake_install.cmake",
+		"/Users/heleny/Documents/GitHub/AgarLE/agario/utils/cmake_install.cmake",
+		"/Users/heleny/Documents/GitHub/AgarLE/agario/bench/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

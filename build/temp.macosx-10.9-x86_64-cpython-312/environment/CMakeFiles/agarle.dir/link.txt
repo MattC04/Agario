@@ -1,0 +1,1 @@
+/usr/bin/c++ -DVERSION_INFO=\"0.0.1\" -O3 -DNDEBUG -bundle -Wl,-headerpad_max_install_names -Xlinker -undefined -Xlinker dynamic_lookup -flto -o /Users/heleny/Documents/GitHub/AgarLE/build/lib.macosx-10.9-x86_64-cpython-312/agarle.cpython-312-darwin.so CMakeFiles/agarle.dir/bindings.cpp.o

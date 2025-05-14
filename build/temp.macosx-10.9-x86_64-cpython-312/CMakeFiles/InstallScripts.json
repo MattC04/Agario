@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/heleny/Documents/GitHub/AgarLE/build/temp.macosx-10.9-x86_64-cpython-312/cmake_install.cmake",
+		"/Users/heleny/Documents/GitHub/AgarLE/build/temp.macosx-10.9-x86_64-cpython-312/agario/cmake_install.cmake",
+		"/Users/heleny/Documents/GitHub/AgarLE/build/temp.macosx-10.9-x86_64-cpython-312/environment/cmake_install.cmake",
+		"/Users/heleny/Documents/GitHub/AgarLE/build/temp.macosx-10.9-x86_64-cpython-312/environment/pybind11/cmake_install.cmake",
+		"/Users/heleny/Documents/GitHub/AgarLE/build/temp.macosx-10.9-x86_64-cpython-312/utils/cmake_install.cmake",
+		"/Users/heleny/Documents/GitHub/AgarLE/build/temp.macosx-10.9-x86_64-cpython-312/bench/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

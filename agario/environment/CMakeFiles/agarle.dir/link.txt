@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -bundle -Wl,-headerpad_max_install_names -o agarleNone CMakeFiles/agarle.dir/bindings.cpp.o  -undefined dynamic_lookup -flto
