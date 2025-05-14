@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -fpermissive -O3 -DNDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/client.dir/client/main.cpp.o -o client  -framework OpenGL -framework OpenGL -lglfw -lglm

@@ -1,1 +1,0 @@
-/usr/bin/c++ -DVERSION_INFO=\"0.0.1\" -O3 -DNDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/test-envs.dir/test/main.cpp.o" -o test-envs  -lgtest -lpthread
