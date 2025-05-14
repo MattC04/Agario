@@ -1,2 +1,0 @@
-agarle
-gym_agario
